@@ -3,7 +3,6 @@ package Service;
 import model.SongRecords;
 import org.springframework.stereotype.Service;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -12,8 +11,7 @@ import java.util.Map;
 public class MusicService {
 
     private Map<Integer, SongRecords> songs = ReadXml.getSongFromXml();       //Eltárolja a zenéket HashMap-be (id + zene adatai)
-    private Integer id = songs.size();               //Fix értékkel nem az utolsó id-nál folytatná
-
+    private Integer id = songs.size();
         public List<SongRecords> getAllSong(){
            return new ArrayList<>(songs.values());
         }

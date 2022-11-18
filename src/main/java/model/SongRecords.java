@@ -1,9 +1,11 @@
 package model;
 
 import Controller.Genres;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
+@Component
 public class SongRecords {
     private Integer id;
     private String title;

@@ -18,21 +18,21 @@ public class MusicController {
         this.musicService = musicService;
     }
 
-    @GetMapping("getAllSon")
+    @GetMapping()
     public List<SongRecords> getAllSong(){
         return musicService.getAllSong();
     }
 
-    @PostMapping("putSong")
+    @PostMapping()
     public SongRecords putSongData(@RequestBody SongRecords song){
         return musicService.addSong(song);
     }
 
     //TODO: UpdateSong függvény létrehozása
 
-    @PostMapping("removeSong")
-    public SongRecords removeSong(@RequestBody Integer id){
-        return  musicService.removeSong(id);
-    }
+//    @PostMapping()
+//    public SongRecords removeSong(@RequestBody Integer id){
+//        return  musicService.removeSong(id);
+//    }
 
 }
